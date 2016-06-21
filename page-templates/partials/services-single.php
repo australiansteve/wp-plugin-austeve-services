@@ -17,17 +17,15 @@
 
 		<div class="gallery">
 		<?php 
-			$gallery_images = get_field('service_gallery'); 
+			$image_url = get_field('service-image'); 
 			
-			foreach($gallery_images as $image)
-			{
-				echo "<img class='service-gallery-image' src='".$image['url']."'/>";
-			}
+			echo "<img class='service-gallery-image' src='".$image_url."'/>";
+			
 		?>
 		</div>
 
 		<div class="description">
-		<?php echo get_field('service_description'); ?>
+		<?php echo get_field('service-description'); ?>
 		</div>
 
 		<?php

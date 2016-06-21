@@ -21,46 +21,38 @@ get_header(); ?>
 				<header class="page-header">
 					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
 				</header><!-- .page-header -->
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
 				<div class="row service-archive-item">
 
-					<div class="small-12 columns">
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-			            <a href='<?php echo get_permalink(); ?>' class=''>
+						<div class="small-2 columns">
 
-	            			<div class="row columns">
-								<?php 
-									$gallery = get_field('service_gallery', $post->ID); 
-									//var_dump($gallery);
-									if ($gallery) {
-										//Use the first image in the gallery
-										echo "<div class='gallery'><img src='".$gallery[0]['url']."'/></div>";
-									}
-									else {
-										//Shouldn't happen
-										echo "<div class='gallery-placeholder'>Placeholder</div>";
-									}
-								?>
-							</div>
+				            <a href='<?php echo get_permalink(); ?>' class=''>
+
+		            			<div class="row columns">
+									<?php 
+										$image_url = get_field('service-image'); 
 				
-	            			<div class="row columns">
-								<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-								<p><?php echo get_field('service_snippet', $post->ID); ?></p>
-							</div>
-				
-			            </a>
+										echo "<img class='service-image' src='".$image_url."'/>";
+									?>
+								</div>
+					
+		            			<div class="row columns">
+									<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+									<p><?php echo get_field('service-description', $post->ID); ?></p>
+								</div>
+					
+				            </a>
 
-					</div>
+						</div>
+
+					<?php endwhile; ?>
 
 				</div> <!-- .service-archive-item.image -->
-
-				<?php endwhile; ?>
 
 				<?php the_posts_navigation(); ?>
 
