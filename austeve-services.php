@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Services - Boreal Environmental
+ * Plugin Name: Services - Custom Post Type
  * Plugin URI: https://github.com/australiansteve/wp-plugin-austeve-services
  * Description: Showcase a portfolio of services
- * Version: 0.1.2
+ * Version: 0.0.1
  * Author: AustralianSteve
  * Author URI: http://AustralianSteve.com
  * License: GPL2
