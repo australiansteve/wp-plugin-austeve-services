@@ -2,19 +2,14 @@ header.page-header {
 	margin-bottom: 3rem;
 }
 
-a {
-	font-size: 1.5rem;
-}
-
-#services-block-grid div {
+.service-archive-item {
 	text-align: center;
-	margin: auto; //Gets vertical alignment to be 'middle'
+	border: 1px solid;
+    margin: 0.5em;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-#services-block-grid .column {
-	margin-bottom: 3rem;
-}
-
-#services-block-grid .gallery img {
-	max-height: 200px;
+.service-image img {
+	margin-bottom: 1rem;
 }

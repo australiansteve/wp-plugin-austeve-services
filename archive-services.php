@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="row"><!-- .row start -->
+<div class="row align-center"><!-- .row start -->
 
 	<div class="small-12 columns"><!-- .columns start -->
 
@@ -29,21 +29,18 @@ get_header(); ?>
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<div class="small-2 columns">
+						<div class="small-6 medium-4 large-3 columns">
 
 				            <a href='<?php echo get_permalink(); ?>' class=''>
 
 		            			<div class="row columns">
-									<?php 
-										$image_url = get_field('service-image'); 
-				
-										echo "<img class='service-image' src='".$image_url."'/>";
-									?>
+									<?php $image = get_field('service-image'); ?>
+									<img class='image-thumbnail' src='<?php echo $image['sizes']['thumbnail'] ?>' />
 								</div>
 					
 		            			<div class="row columns">
 									<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-									<p><?php echo get_field('service-description', $post->ID); ?></p>
+									<p><?php echo get_field('service-snippet', $post->ID); ?></p>
 								</div>
 					
 				            </a>

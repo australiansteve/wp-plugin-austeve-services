@@ -16,12 +16,8 @@
 	<div class="entry-content">
 
 		<div class="gallery">
-		<?php 
-			$image_url = get_field('service-image'); 
-			
-			echo "<img class='service-gallery-image' src='".$image_url."'/>";
-			
-		?>
+			<?php $image = get_field('service-image'); ?>
+			<img src='<?php echo $image['sizes']['medium'] ?>' />
 		</div>
 
 		<div class="description">
