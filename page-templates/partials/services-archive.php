@@ -7,7 +7,7 @@
  * @package AUSteve Services
  */
 ?>
-<div class="small-6 medium-4 large-3 columns">
+<div class="small-12 medium-4 large-3 columns">
 
 	<div class="container service-archive-item">
 
