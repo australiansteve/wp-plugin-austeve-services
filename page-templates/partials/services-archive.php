@@ -15,18 +15,16 @@
 
 			<div class="small-12 columns service-image">
 
-				<a href="<?php echo get_permalink(); ?>">
-					<?php $image = get_field('service-image'); ?>
-					<img class='image-thumbnail' src='<?php echo $image['sizes']['thumbnail'] ?>' />
-				</a>
+				<?php $image = get_field('service-image'); ?>
+				<img class='image-thumbnail' src='<?php echo $image['sizes']['thumbnail'] ?>' />
+
 			</div>
 
 			<div class="small-12 columns">
 
-				<a href="<?php echo get_permalink(); ?>">
-					<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-					<p class="service-snippet"><?php echo get_field('service-snippet'); ?></p>
-				</a>
+				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+				<p class="service-snippet"><?php echo get_field('service-snippet'); ?></p>
+				
 			</div>
 
 		</div>
