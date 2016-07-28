@@ -166,7 +166,7 @@ function austeve_services_shortcode_archive($atts){
     	'order'          => $scAtts['order'],
     );
 
-    echo '<div class="row align-center archive-container">';
+    echo '<div class="row align-center services-archive-container">';
     $query = new WP_Query( $args );
     if( $query->have_posts() ){
         while( $query->have_posts() ){
