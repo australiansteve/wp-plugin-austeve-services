@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Services - Custom Post Type
+ * Plugin Name: Services - Elwood's Wood Lab
  * Plugin URI: https://github.com/australiansteve/wp-plugin-austeve-services
  * Description: Showcase a portfolio of services
  * Version: 0.0.1
