@@ -25,42 +25,26 @@ get_header(); ?>
 					?>
 				</header><!-- .page-header -->
 
+
+				<div class="row small-up-2 medium-up-4 services-block-grid">
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="row service-archive-item">
+					<div class="column">
 
-					<div class="small-12 columns">
+						<div class="service-archive-item" style="background-image: url(<?php echo get_field('image')['url']; ?>); background-size: contain; background-position: 50% 50%;">
 
-			            <a href='<?php echo get_permalink(); ?>' class=''>
-
-	            			<div class="row columns">
-								<?php 
-									$gallery = get_field('service_gallery', $post->ID); 
-									//var_dump($gallery);
-									if ($gallery) {
-										//Use the first image in the gallery
-										echo "<div class='gallery'><img src='".$gallery[0]['url']."'/></div>";
-									}
-									else {
-										//Shouldn't happen
-										echo "<div class='gallery-placeholder'>Placeholder</div>";
-									}
-								?>
+							<div class="service-title-container" style="">
+								<?php the_title( '<h2 class="service-title">', '</h2>' ); ?>
 							</div>
-				
-	            			<div class="row columns">
-								<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-								<p><?php echo get_field('service_snippet', $post->ID); ?></p>
-							</div>
-				
-			            </a>
 
-					</div>
-
-				</div> <!-- .service-archive-item.image -->
+						</div> <!-- .service-archive-item -->
+					
+					</div><!-- .column -->
 
 				<?php endwhile; ?>
+
+				</div>
 
 				<?php the_posts_navigation(); ?>
 

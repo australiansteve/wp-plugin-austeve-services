@@ -2,19 +2,23 @@ header.page-header {
 	margin-bottom: 3rem;
 }
 
-a {
-	font-size: 1.5rem;
-}
-
-#services-block-grid div {
+.services-block-grid div {
 	text-align: center;
 	margin: auto; //Gets vertical alignment to be 'middle'
 }
 
-#services-block-grid .column {
+.services-block-grid .column{
 	margin-bottom: 3rem;
 }
 
-#services-block-grid .gallery img {
-	max-height: 200px;
+.services-block-grid .service-archive-item {
+	
+}
+
+.services-block-grid .service-title-container {
+	min-height: 12rem;
+}
+
+.services-block-grid h2.service-title {
+	font-size: 1.75rem;
 }
