@@ -23,7 +23,7 @@
 			<div class="small-12 columns">
 
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-				<p class="service-snippet"><?php echo get_field('service-snippet'); ?></p>
+				<div class="service-snippet"><?php echo get_field('service-snippet'); ?></div>
 				
 			</div>
 

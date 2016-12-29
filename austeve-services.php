@@ -155,8 +155,8 @@ add_shortcode( 'services_directory', 'austeve_services_shortcode_archive' );
 function austeve_services_shortcode_archive($atts){
 	ob_start();
 	$scAtts = shortcode_atts( array(
-		'orderby' => 'service-order',
-		'order' => 'ASC',
+		'orderby' => '',
+		'order' => '',
 		'number' => -1
 		), $atts);
 
